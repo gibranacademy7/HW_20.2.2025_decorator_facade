@@ -7,7 +7,10 @@
 #-------------------------------------------------------------------------------------------
 
 import time
+import logging
 
+logging.basicConfig(filename='apps.log', level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 # Logme decorator
 def logme(func):
     def wrapper(*args, **kwargs):
